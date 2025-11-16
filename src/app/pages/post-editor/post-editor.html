@@ -1,0 +1,25 @@
+<div class="bg-gray-950 min-h-screen text-white">
+  <div class="container mx-auto px-6 py-20 pt-32">
+    <h1 class="text-5xl font-bold mb-12 text-center">Crear Nuevo Artículo</h1>
+
+    <form [formGroup]="postForm" (ngSubmit)="onSubmit()" class="max-w-4xl mx-auto space-y-6">
+      <div>
+        <label for="title" class="block text-gray-300 mb-2">Título del Artículo</label>
+        <input type="text" id="title" formControlName="title" class="w-full bg-gray-800 border-gray-700 rounded-md p-3 text-white focus:outline-none focus:ring-2 focus:ring-teal-500">
+      </div>
+
+      <div>
+        <label for="content" class="block text-gray-300 mb-2">Contenido (Puedes usar Markdown)</label>
+        <textarea id="content" formControlName="content" rows="15" class="w-full bg-gray-800 border-gray-700 rounded-md p-3 text-white font-mono focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Escribe aquí tu artículo... # Título, **negrita**, etc."></textarea>
+      </div>
+
+      <button type="submit" [disabled]="isSubmitting" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-md transition duration-300 disabled:bg-gray-600">
+        @if(isSubmitting) {
+          <span>Publicando...</span>
+        } @else {
+          <span>Publicar Artículo</span>
+        }
+      </button>
+    </form>
+  </div>
+</div>

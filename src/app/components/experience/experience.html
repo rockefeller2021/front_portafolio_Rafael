@@ -1,0 +1,39 @@
+<div class="bg-gray-950 text-white py-20">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-12">Tecnologías y Herramientas</h2>
+
+    <div class="scroller w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
+      <div class="scroller__inner">
+
+        @for (tech of technologies; track tech.name) {
+          <div class="flex flex-col items-center justify-center min-w-[150px]">
+            <div class="h-16 w-16 flex items-center justify-center text-gray-400">
+              @if (tech.icon) {
+                <fa-icon [icon]="tech.icon" class="text-5xl"></fa-icon>
+              }
+              @if (tech.svgUrl) {
+                <img [src]="tech.svgUrl" [alt]="tech.name" class="h-full w-full object-contain"/>
+              }
+            </div>
+            <p class="mt-2 text-sm">{{ tech.name }}</p>
+          </div>
+        }
+
+        @for (tech of technologies; track tech.name) {
+          <div class="flex flex-col items-center justify-center min-w-[150px]">
+             <div class="h-16 w-16 flex items-center justify-center text-gray-400">
+              @if (tech.icon) {
+                <fa-icon [icon]="tech.icon" class="text-5xl"></fa-icon>
+              }
+              @if (tech.svgUrl) {
+                <img [src]="tech.svgUrl" [alt]="tech.name" class="h-full w-full object-contain"/>
+              }
+            </div>
+            <p class="mt-2 text-sm">{{ tech.name }}</p>
+          </div>
+        }
+
+      </div>
+    </div>
+  </div>
+</div>

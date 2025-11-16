@@ -1,0 +1,26 @@
+<nav
+  [ngClass]="{
+    'bg-gray-900/80 backdrop-blur-lg shadow-lg': isScrolled || !isHomePage,
+    'bg-transparent': !isScrolled && isHomePage
+  }"
+  class="fixed top-0 left-0 w-full z-50 transition-colors duration-300 ease-in-out">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+
+    <a routerLink="/" class="text-xl font-bold text-white">Rafael Alvarado</a>
+
+    <div class="hidden md:flex items-center space-x-8">
+      <a routerLink="/" fragment="inicio" class="text-gray-300 hover:text-white transition-colors">Inicio</a>
+      <a routerLink="/" fragment="experiencia" class="text-gray-300 hover:text-white transition-colors">Experiencia</a>
+      <a routerLink="/" fragment="portafolio" class="text-gray-300 hover:text-white transition-colors">Portafolio</a>
+
+      <a routerLink="/" fragment="acerca" class="text-gray-300 hover:text-white transition-colors">Acerca de mí</a>
+      <a routerLink="/" fragment="contacto" class="text-gray-300 hover:text-white transition-colors">Contacto</a>
+      <a routerLink="/" fragment="acerca" class="text-gray-300 hover:text-white transition-colors">Acerca de mí</a>
+
+    <button (click)="uiService.toggleTerminal()" title="Abrir terminal" class="text-gray-400 hover:text-teal-400 transition-colors">
+        <fa-icon [icon]="faTerminal"></fa-icon>
+    </button>
+      <a routerLink="/blog" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-md transition duration-300">Blog</a>
+    </div>
+  </div>
+</nav>

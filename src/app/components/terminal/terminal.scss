@@ -1,0 +1,15 @@
+/* Estilo para el cursor que parpadea */
+.cursor {
+  display: inline-block;
+  background-color: #4ee6d6; // Un color teal brillante
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #4ee6d6;
+  }
+}

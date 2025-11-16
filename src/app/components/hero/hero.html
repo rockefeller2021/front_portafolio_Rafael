@@ -1,0 +1,23 @@
+<div class="relative h-screen flex items-center justify-center text-center bg-gray-950 overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(#2d3748_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+  <div class="relative z-10 text-white px-4">
+    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight mb-4">
+      Rafael Enrique Alvarado García
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-300 font-light mb-8">
+      {{ currentSubtitle }}<span class="animate-ping">|</span>
+    </p>
+
+    <div class="font-mono text-lg md:text-xl text-teal-400 tracking-wider bg-black bg-opacity-20 backdrop-blur-sm rounded-lg px-4 py-2 inline-flex space-x-4">
+      @if (journey.years > 0) {
+        <div><span>{{ journey.years }}</span><span class="text-xs text-gray-400 block">AÑOS</span></div>
+      }
+      <div><span>{{ journey.days }}</span><span class="text-xs text-gray-400 block">DÍAS</span></div>
+      <div><span>{{ journey.hours }}</span><span class="text-xs text-gray-400 block">HORAS</span></div>
+      <div><span>{{ journey.minutes }}</span><span class="text-xs text-gray-400 block">MIN</span></div>
+      <div><span>{{ journey.seconds }}</span><span class="text-xs text-gray-400 block">SEG</span></div>
+    </div>
+    <p class="text-sm text-gray-500 mt-3">...de trayectoria profesional.</p>
+    </div>
+</div>

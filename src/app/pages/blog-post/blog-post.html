@@ -1,0 +1,18 @@
+<div class="bg-gray-950 min-h-screen text-white">
+  <div class="container mx-auto px-6 py-20 pt-32">
+      @if (post$ | async; as post) {
+          <article class="prose prose-invert prose-lg max-w-4xl mx-auto">
+              <a routerLink="/blog" class="text-teal-400 hover:text-teal-300 no-underline mb-8 block">&larr; Volver a todos los artículos</a>
+
+              <h1 class="text-white">{{ post.title }}</h1>
+              <p class="text-sm text-gray-500 mt-1">Publicado el: {{ post.createdAt | date: 'longDate' }}</p>
+
+              <hr class="border-gray-700 my-8">
+
+              <markdown [data]="post.content"></markdown>
+          </article>
+      } @else {
+          <p class="text-center">Cargando artículo...</p>
+      }
+  </div>
+</div>
