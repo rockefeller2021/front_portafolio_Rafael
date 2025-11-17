@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "C:\\Users\\magom\\OneDrive\\Desktop\\Angular\\portafolio-rafael\\dist\\portafolio-rafael\\browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
